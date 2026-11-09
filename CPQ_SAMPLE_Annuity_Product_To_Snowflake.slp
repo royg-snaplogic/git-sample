@@ -49,11 +49,11 @@
         },
         "info": {
             "author": {
-                "value": "rgoonewardena@snaplogic.com"
+                "value": ""
             },
             "label": {},
             "notes": {
-                "value": ""
+                "value": "Sample: copies the top 10 rows of SQL Server LUMA_DEMO.annuityexchange.product to Snowflake PUBLIC.CPQ_SAMPLE_ANNUITY_PRODUCT, excluding rate columns (name contains 'rate' or ends in '_pct'). Git integration test change made via the SnapLogic API on 9 Nov 2026."
             },
             "pipeline_doc_uri": {
                 "value": null
@@ -89,8 +89,8 @@
             "11111111-1111-1111-1111-000000000000": {
                 "error": {},
                 "errors": {},
-                "grid_x_int": 1,
-                "grid_y_int": 1,
+                "grid_x_int": 2,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -102,8 +102,8 @@
             "11111111-1111-1111-1111-000000000001": {
                 "error": {},
                 "errors": {},
-                "grid_x_int": 2,
-                "grid_y_int": 1,
+                "grid_x_int": 3,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -115,8 +115,8 @@
             "11111111-1111-1111-1111-000000000002": {
                 "error": {},
                 "errors": {},
-                "grid_x_int": 3,
-                "grid_y_int": 1,
+                "grid_x_int": 4,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -128,8 +128,8 @@
             "11111111-1111-1111-1111-000000000003": {
                 "error": {},
                 "errors": {},
-                "grid_x_int": 4,
-                "grid_y_int": 1,
+                "grid_x_int": 5,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -141,8 +141,8 @@
             "11111111-1111-1111-1111-000000000004": {
                 "error": {},
                 "errors": {},
-                "grid_x_int": 5,
-                "grid_y_int": 1,
+                "grid_x_int": 6,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -154,8 +154,8 @@
             "11111111-1111-1111-1111-000000000005": {
                 "error": {},
                 "errors": {},
-                "grid_x_int": 6,
-                "grid_y_int": 1,
+                "grid_x_int": 7,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -165,7 +165,6 @@
                 "source": "snap catagory"
             }
         },
-        "notes": {},
         "pan_x_num": 0,
         "pan_y_num": 0,
         "scale_ratio": 1
@@ -230,14 +229,8 @@
                     "executable_during_suggest": {
                         "value": false
                     },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
                     "handleDateTimeValues": {
                         "value": "Default Date Time format in UTC Time Zone"
-                    },
-                    "ignoreEmptyResult": {
-                        "value": false
                     },
                     "maxRetryProp": {
                         "expression": false,
@@ -263,9 +256,6 @@
                     "sqlStatement": {
                         "expression": false,
                         "value": "DROP TABLE IF EXISTS PUBLIC.CPQ_SAMPLE_ANNUITY_PRODUCT"
-                    },
-                    "useResultQuery": {
-                        "value": false
                     }
                 }
             }
@@ -339,12 +329,6 @@
                         "value": "Use account setting"
                     },
                     "executable_during_suggest": {
-                        "value": false
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "ignoreEmptyResult": {
                         "value": false
                     },
                     "maxRetryProp": {
@@ -527,21 +511,6 @@
                     "executable_during_suggest": {
                         "value": false
                     },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "icebergTableProps": {
-                        "value": {
-                            "baseLocation": {
-                                "expression": false,
-                                "value": null
-                            },
-                            "externalVolume": {
-                                "expression": false,
-                                "value": null
-                            }
-                        }
-                    },
                     "isIcebergTable": {
                         "value": false
                     },
@@ -722,14 +691,8 @@
                     "executable_during_suggest": {
                         "value": false
                     },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
                     "handleDateTimeValues": {
                         "value": "Default Date Time format in UTC Time Zone"
-                    },
-                    "ignoreEmptyResult": {
-                        "value": false
                     },
                     "maxRetryProp": {
                         "expression": false,
@@ -755,9 +718,6 @@
                     "sqlStatement": {
                         "expression": false,
                         "value": "SELECT CURRENT_DATABASE() AS target_database, COUNT(*) AS rows_in_target FROM PUBLIC.CPQ_SAMPLE_ANNUITY_PRODUCT"
-                    },
-                    "useResultQuery": {
-                        "value": false
                     }
                 }
             }
